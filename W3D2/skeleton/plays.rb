@@ -11,6 +11,7 @@ class PlayDBConnection < SQLite3::Database
   end
 end
 
+
 class Play
   attr_accessor :title, :year, :playwright_id
 
@@ -75,6 +76,13 @@ class Play
     SQL
   end
 end
+# ----
+
+Play.all.each do |obj|
+  p obj
+end 
+
+# ------
 
 class Playwright
   attr_accessor :name, :birth_year

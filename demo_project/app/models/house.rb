@@ -1,5 +1,4 @@
 class House < ActiveRecord::Base
-  # self.abstract_class = true
   validates :address, presence: true
   has_many(
     :people,

@@ -128,16 +128,26 @@ class MetaCorgiSnacks
   #   result = "#{string}: #{info}: #{tastiness} "
   #   tastiness > 30 ? "* #{result}" : result
   # end
+  info = @snack_box.get_treat_info(@box_id)
+  tastiness = @snack_box.get_treat_tastiness(@box_id)
+  result = "Treat: #{info}: #{tastiness} "
+  tastiness > 30 ? "* #{result}" : result
 
   def self.define_snack(name)
     # Your code goes here...
     def define_snack
       define_method(name) do
-      info = @snack_box.send("get_#{name}_info", @box_id)
-      tastiness = @snack_box.send("get_#{name}_tastiness", @box_id)
-      display_name = "#{name.split('_').map(&:capitalize).join(' ')}"
-      result = "#{display_name}: #{info}: #{tastiness}"
-      tastiness > 30 ? "* #{result}" : result
+        info = @snack_box.send("get_#{name}_info", @box_id)
+
+
+
+
+      # define_method(name) do
+      # info = @snack_box.send("get_#{name}_info", @box_id)
+      # tastiness = @snack_box.send("get_#{name}_tastiness", @box_id)
+      # display_name = "#{name.split('_').map(&:capitalize).join(' ')}"
+      # result = "#{display_name}: #{info}: #{tastiness}"
+      # tastiness > 30 ? "* #{result}" : result
     end
     end
 
