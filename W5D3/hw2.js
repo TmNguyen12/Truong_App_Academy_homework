@@ -53,4 +53,8 @@ function paradeHelper(name) {
   console.log(`${name} is trotting by!`)
 }
 
-paradeHelper('ellie');
+// paradeHelper('ellie');
+
+// Once you have this function, call forEach on the herd and
+// pass it in as the callback without invoking it. Elephants galore!
+herd.forEach( x => paradeHelper(x));

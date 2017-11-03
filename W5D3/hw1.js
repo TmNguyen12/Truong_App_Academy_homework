@@ -116,4 +116,3 @@ function sumOfNPrimes(n) {
 }
 // sumOfNPrimes(1);
 // console.log(sumOfNPrimes(4));
-
