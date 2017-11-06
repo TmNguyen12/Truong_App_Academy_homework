@@ -17,4 +17,7 @@ const Noodles = new Dog ();
 
 Noodles.chase(Markov)
 Noodles.chase.call(Markov, Noodles)
+// makes Markov THIS and Noodles is the argument
+
 Noodles.chase.apply(Markov, [Noodles])
+// same thing but we need to pass in an array of arguments
